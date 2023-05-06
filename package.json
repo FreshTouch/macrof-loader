@@ -1,0 +1,60 @@
+{
+  "name": "@macrof/loader",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "description": "React MicroFrontend Loader, Typescript, Webpack 5, ModuleFederation",
+  "author": "FreshTouch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreshTouch/macrof-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FreshTouch/macrof-loader/issues"
+  },
+  "homepage": "https://github.com/FreshTouch/macrof-loader",
+  "keywords": [
+    "typescript",
+    "react",
+    "webpack 5",
+    "webpack",
+    "microfrontend-loader",
+    "microfrontend",
+    "microfrontends",
+    "micro frontend",
+    "modulefederation",
+    "module federation",
+    "craco",
+    "js",
+    "lazy loading"
+  ],
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "lint:ts": "eslint --ext tsx --ext .ts src",
+    "lint-fix:ts": "eslint --ext tsx --ext .ts src --fix",
+    "preversion": "git rev-parse --abbrev-ref HEAD",
+    "postversion": "git push origin HEAD && git push origin HEAD --follow-tags"
+  },
+  "files": [
+    "/lib"
+  ],
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "@macrof/tool-kit": "^0.0.1",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "typescript": "4.9.4"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

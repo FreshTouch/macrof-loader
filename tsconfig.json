@@ -1,0 +1,9 @@
+{
+  "extends": "@macrof/tool-kit/tsconfig/packages",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "lib"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"]
+}
